@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/inicio.unity
+    guid: 6db3312d5d883de499a48260d82359f9
+  - enabled: 1
+    path: Assets/Scenes/principal.unity
+    guid: 4899c725ed87f364daffa7ea3ae88441
+  - enabled: 1
+    path: Assets/Scenes/juego.unity
+    guid: 810adf272efe7ef45a66a6cbefb39f8e
+  - enabled: 1
+    path: Assets/Scenes/juego2.unity
+    guid: 9608c871211ec114aafb74a17d1f42ef
+  - enabled: 1
+    path: Assets/Scenes/gameOver.unity
+    guid: 3bd20c3e1964a514494db5875baa0d11
+  - enabled: 1
+    path: Assets/Scenes/ganaste.unity
+    guid: fcb9a5925ddc662429cc0ea7ef4444b6
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: d63b245a793f3e4469730b23c191f697
+  - enabled: 1
+    path: Assets/Scenes/EscenasMamiferos.unity
+    guid: ac5c653e3c4ba5c48abab01855a18753
+  - enabled: 1
+    path: Assets/Scenes/EscenaAves.unity
+    guid: 6c0f6b9c2a1fe474e90a4392d3034c55
+  - enabled: 1
+    path: Assets/Scenes/Escena3Combinados.unity
+    guid: f3672daf6206f2f4e9eb2d742ddd15fa
+  - enabled: 1
+    path: Assets/menuJuegos.unity
+    guid: c697dc7bf35eb9248b133d98621fdeb6
+  - enabled: 1
+    path: Assets/Scenes/juegoScene.unity
+    guid: 51c15f12f41e7134c9e4c244b845028e
+  - enabled: 1
+    path: Assets/Scenes/ganador.unity
+    guid: 7d8032089915e9646b476e2ccc4f39ee
+  - enabled: 1
+    path: Assets/Scenes/inicio.unity
+    guid: 9e17f0b4c541ca744b22d1300d7e0ed2
+  - enabled: 1
+    path: Assets/Scenes/fin.unity
+    guid: 5ab40c5db603271448ca73a669f45bbb
+  - enabled: 1
+    path: Assets/Scenes/menuJuego1.unity
+    guid: 340e343ba8c777e44b5886f78bc4db31
+  - enabled: 1
+    path: Assets/Scenes/introBosque.unity
+    guid: b0a41f3f163a3cc48be3019bd6d516fd
+  m_configObjects: {}
