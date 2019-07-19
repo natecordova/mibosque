@@ -859,6 +859,7 @@ GameObject:
   - component: {fileID: 233179723}
   - component: {fileID: 233179722}
   - component: {fileID: 233179721}
+  - component: {fileID: 233179725}
   m_Layer: 5
   m_Name: Oso
   m_TagString: Untagged
@@ -946,6 +947,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233179719}
   m_CullTransparentMesh: 0
+--- !u!114 &233179725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233179719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d217ae1773422f4b92447f045ad9bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img: {fileID: 233179722}
+  referenceId: 3
 --- !u!1 &238344590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,11 +2775,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 711904603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b18a32c30f483e4fae18c834817fc04, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d217ae1773422f4b92447f045ad9bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 711904607}
-  url: https://clipground.com/images/monkey-baby-clipart-14.jpg
+  referenceId: 1
 --- !u!1 &732090170
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,7 +3401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -365.3, y: -31.569977}
+  m_AnchoredPosition: {x: -365.30005, y: -31.569946}
   m_SizeDelta: {x: -718.72, y: -110.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982322272
@@ -3939,6 +3954,7 @@ GameObject:
   - component: {fileID: 1330896258}
   - component: {fileID: 1330896257}
   - component: {fileID: 1330896256}
+  - component: {fileID: 1330896260}
   m_Layer: 5
   m_Name: Venado
   m_TagString: Untagged
@@ -4026,6 +4042,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330896254}
   m_CullTransparentMesh: 0
+--- !u!114 &1330896260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330896254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d217ae1773422f4b92447f045ad9bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img: {fileID: 1330896258}
+  referenceId: 4
 --- !u!1 &1508673950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5093,6 +5123,7 @@ GameObject:
   - component: {fileID: 2008922807}
   - component: {fileID: 2008922806}
   - component: {fileID: 2008922805}
+  - component: {fileID: 2008922809}
   m_Layer: 5
   m_Name: Raton
   m_TagString: Untagged
@@ -5180,6 +5211,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008922803}
   m_CullTransparentMesh: 0
+--- !u!114 &2008922809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008922803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d217ae1773422f4b92447f045ad9bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img: {fileID: 2008922807}
+  referenceId: 2
 --- !u!1 &2060720959
 GameObject:
   m_ObjectHideFlags: 0
