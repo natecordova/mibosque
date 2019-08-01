@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\canastaController.cs" />
     <Compile Include="Assets\Scripts\canastaPounds.cs" />
     <Compile Include="Assets\Scripts\canastaScore.cs" />
+    <Compile Include="Assets\Scripts\db.cs" />
     <Compile Include="Assets\Scripts\DestroyContact.cs" />
     <Compile Include="Assets\Scripts\Drop.cs" />
     <Compile Include="Assets\Scripts\DropPajaro.cs" />
