@@ -8,6 +8,11 @@ TagManager:
   - Bad
   - sound
   - audio
+  - mamifero
+  - mono_capuchino
+  - rata_espinosa
+  - oso_perezoso
+  - venado_cola_blanca
   layers:
   - Default
   - TransparentFX

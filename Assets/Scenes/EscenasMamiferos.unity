@@ -750,6 +750,7 @@ RectTransform:
   - {fileID: 1695672907}
   - {fileID: 261801098}
   - {fileID: 207676739}
+  - {fileID: 510915245}
   m_Father: {fileID: 1190076707}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -862,7 +863,7 @@ GameObject:
   - component: {fileID: 233179725}
   m_Layer: 5
   m_Name: Oso
-  m_TagString: Untagged
+  m_TagString: mamifero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1725,6 +1726,127 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &510915244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 510915245}
+  - component: {fileID: 510915249}
+  - component: {fileID: 510915248}
+  - component: {fileID: 510915247}
+  - component: {fileID: 510915246}
+  m_Layer: 5
+  m_Name: sombraPrueba
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &510915245
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510915244}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 213074682}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 28, y: -99.6}
+  m_SizeDelta: {x: 114.4, y: 142.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &510915246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510915244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4080d3617160162458f06342523baa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim1: {fileID: 0}
+  anim2: {fileID: 0}
+  anim3: {fileID: 0}
+  anim4: {fileID: 0}
+  img: {fileID: 0}
+--- !u!114 &510915247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510915244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 95edc02b05b102d41884ee285678f03b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &510915248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510915244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af63c818d3bcc1478486c3398bad0b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valor: 5
+  objeto1: {fileID: 0}
+  objeto2: {fileID: 0}
+  panel: {fileID: 2060720959}
+  estrella1: {fileID: 981179091}
+  estrella2: {fileID: 84571445}
+  estrella3: {fileID: 2094511829}
+  estrella4: {fileID: 1134517081}
+  contarEncendidos: 0
+  inicontador: {fileID: 0}
+  MusicClipMono: {fileID: 8300000, guid: f1ad13892e4a81c47a0c26c5bb610797, type: 3}
+  MusicClipOso: {fileID: 8300000, guid: 4fa3fbc6757ec104e85064622eca2068, type: 3}
+  MusicClipRaton: {fileID: 8300000, guid: a44ca4b75fa38f840b3d2b675ffe7822, type: 3}
+  MusicClipVenado: {fileID: 8300000, guid: 6bd0c584b06f255438c0f7b7ac3e4713, type: 3}
+  MusicClipError: {fileID: 8300000, guid: 1fbd866f38b54d6469db11d8eadb94a8, type: 3}
+  MusicSource: {fileID: 106627644}
+--- !u!222 &510915249
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510915244}
+  m_CullTransparentMesh: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
