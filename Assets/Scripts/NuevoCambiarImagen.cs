@@ -8,19 +8,19 @@ using UnityEngine.UI;
 public class NuevoCambiarImagen : MonoBehaviour
 {
 
-    public Image anim1, anim2, anim3, anim4;
+    public Image anim;
     private db objdb;    
     private string monoBase, rataBase, osoBase, venadoBase;
-
-
-    string[] rutas = {
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/mono%20capuchino_1.png",
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/rata%20espinosa_1.png",
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/oso%20perezoso_1.png",
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/venado%20cola%20blanca-01.png"
-    };
+    public CargarAnimales charge;
 
     string[] rutas2 = {
+        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/mono_capuchino-color.png",
+        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/rata_espinosa-color.png",
+        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/oso_perezoso-color.png",
+        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/venado_cola_blanca-color.png"
+    };
+
+    string[] rutas = {
         "Sprites/mono_capuchino-color",
         "Sprites/rata_espinosa-color",
         "Sprites/oso_perezoso-color",
@@ -35,15 +35,22 @@ public class NuevoCambiarImagen : MonoBehaviour
      string url = "https://clipground.com/images/monkey-baby-clipart-14.jpg";     
 
     IEnumerator Start()
-    {
-
-        
-        //Asignar cada game object
-        anim1 = GameObject.Find("Mono").GetComponent<Image>();
-        anim2 = GameObject.Find("Raton").GetComponent<Image>();
-        anim3 = GameObject.Find("Oso").GetComponent<Image>();
-        anim4 = GameObject.Find("Venado").GetComponent<Image>();
-
+    {    
+        if (name == "A1"){
+            string rrr = charge.aleatorias[0];
+            Debug.Log(rrr);
+            anim = GameObject.Find("A1").GetComponent<Image>();
+        }
+        if (name == "A2"){
+            anim = GameObject.Find("A2").GetComponent<Image>();
+        }
+        if (name == "A3"){
+            anim = GameObject.Find("A3").GetComponent<Image>();
+        }
+        if (name == "A4"){
+            anim = GameObject.Find("A4").GetComponent<Image>();
+        }
+        Debug.Log("Nombre Soy: " + name);
 
         //Cargar las imagenes locales
         //objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
@@ -52,50 +59,37 @@ public class NuevoCambiarImagen : MonoBehaviour
 
         Debug.Log("CONSULTA" + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
 
-        monoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
+        /*monoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
         rataBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
         osoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '3'");
-        venadoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");
+        venadoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");*/
 
 
-
-        anim1.sprite = Resources.Load<Sprite>(monoBase); //"Sprites/oso perezoso_1"
-        anim2.sprite = Resources.Load<Sprite>(rataBase); //"Sprites/rata espinosa_1"
-        anim3.sprite = Resources.Load<Sprite>(osoBase); //"Sprites/mono capuchino_1"
-        anim4.sprite = Resources.Load<Sprite>(venadoBase); //"Sprites/venado cola blanca-01"
-
-        Debug.Log("monooo" + monoBase);
-
-        //  Debug.Log("anim sql" + objdb.reader.GetString(3));
-
-
-        // Generate a random index less than the size of the array.  
         System.Random rand = new System.Random();
         int index = rand.Next(rutas.Length);
-        
-        //Cargar imágenes desde url
-        WWW www = new WWW((rutas[index]));        
+        string rd = rutas[index];
         string ruta = rutas[index];
+        Debug.Log("aleatorio "+name+": " + ruta);
         string[] dir = ruta.Split('/');        
         string etiqueta = dir[dir.Length-1];        
         string[] et = etiqueta.Split('-'); 
-
         if(et[0].Contains(".png")){
             string[] lab = et[0].Split('.'); 
             tag = lab[0];
-            Debug.Log("Contiene PNG");
+            name = lab[0];
+            //Debug.Log("Contiene PNG");
             Debug.Log("etiqueta final asignada: " + lab[0]);
         }else{
             tag = et[0];
-            Debug.Log("etiqueta asignada: " + et[0]);
+            Debug.Log("etiqueta asignada 1: " + et[0]);
         }
+        anim.sprite = Resources.Load<Sprite>(ruta); //"Sprites/oso perezoso_1"
 
-       
+        WWW www = new WWW((rutas[index]));        
+               
         yield return www;
-        img.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0, 0), 1);
-        /*
-        String etiqueta = dir[1];
-        Debug.Log("pedazo de cadena: " + etiqueta);*/
+        //img.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0, 0), 1);
+       
     }
 
     /*public void Start(){

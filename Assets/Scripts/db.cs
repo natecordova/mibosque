@@ -92,7 +92,7 @@ public class db : MonoBehaviour
 
             //int rand = reader.GetInt32(2);
 
-            Debug.Log("id= " + id + "  nombre =" + nombre + "  tipo =" + tipo + "  url =" + url + "  rutaLocal =" + rutaLocal);
+            Debug.Log("id= " + id + "  nombre= " + nombre + "  tipo= " + tipo + "  url= " + url + "  rutaLocal= " + rutaLocal);
         }
 
         reader.Close();

@@ -19,7 +19,7 @@ public class SimpleDrag2 : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
 {
         
         this.transform.position = eventData.position;
-        Debug.Log(eventData.pointerDrag.name + "Está siendo arrastrado");
+        Debug.Log(eventData.pointerDrag.name + " Está siendo arrastrado");
         Debug.Log(eventData.pointerDrag.tag + " Este es el tag");
 
 }

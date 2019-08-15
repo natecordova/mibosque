@@ -113,7 +113,7 @@ public class DropPajaro : MonoBehaviour, IDropHandler
         if (estrella1.activeSelf == false)
         {
             estrella1.SetActive(true);
-            
+           
         }
         else if (estrella2.activeSelf == false)
         {

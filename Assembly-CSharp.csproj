@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\canastaController.cs" />
      <Compile Include="Assets\Scripts\canastaPounds.cs" />
      <Compile Include="Assets\Scripts\canastaScore.cs" />
+     <Compile Include="Assets\Scripts\CargarAnimales.cs" />
      <Compile Include="Assets\Scripts\CargarSombra.cs" />
      <Compile Include="Assets\Scripts\db.cs" />
      <Compile Include="Assets\Scripts\DestroyContact.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\Manager.cs" />
      <Compile Include="Assets\Scripts\NuevoCambiarImagen.cs" />
      <Compile Include="Assets\Scripts\NuevoCargarImagen.cs" />
+     <Compile Include="Assets\Scripts\NuevoDrop.cs" />
      <Compile Include="Assets\Scripts\plantsController.cs" />
      <Compile Include="Assets\Scripts\principal.cs" />
      <Compile Include="Assets\Scripts\regresar.cs" />
