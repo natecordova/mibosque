@@ -9,7 +9,7 @@ public class CargarSombra : MonoBehaviour
     public string animal;
     private db objdb;    
     private string monoBase, rataBase, osoBase, venadoBase;
-
+    public Image i1,i2,i3,i4;
 
     string[] rutasX = {
         "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/mono%20capuchino_1.png",
@@ -31,8 +31,13 @@ public class CargarSombra : MonoBehaviour
 
     IEnumerator Start()
     {
+        int index = 0;
+        bool rep = true;
 
-        
+        i1 = GameObject.Find("S1").GetComponent<Image>();
+        i2 = GameObject.Find("S2").GetComponent<Image>();
+        i3 = GameObject.Find("S3").GetComponent<Image>();
+        i4 = GameObject.Find("S4").GetComponent<Image>();
         if (name == "S1"){
             sombra = GameObject.Find("S1").GetComponent<Image>();
         }
@@ -58,10 +63,11 @@ public class CargarSombra : MonoBehaviour
         rataBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
         osoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '3'");
         venadoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");*/
-
+    while(rep == true){
+            rep = false;
 
         System.Random rand = new System.Random();
-        int index = rand.Next(rutas.Length);
+        index = rand.Next(rutas.Length);
         string rd = rutas[index];
         string ruta = rutas[index];
         Debug.Log("aleatorio SOMBRA "+name+": " + ruta);
@@ -83,12 +89,40 @@ public class CargarSombra : MonoBehaviour
         animal = ruta.Replace("sombra","color");
 		Debug.Log("animal : "+ animal);
 
+        Debug.Log("SOMBRA DESPUES: " + sombra.sprite);
+            if(name == "S1"){
+                i1 = GameObject.Find("S1").GetComponent<Image>();
+                if (i1.sprite == i2.sprite || i1.sprite== i3.sprite || i1.sprite == i4.sprite){
+                rep = true;
+                Debug.Log("SOMBRA REPETIDO :" +rep);  
+                }
+            }
+            if(name == "S2"){
+                i2 = GameObject.Find("S2").GetComponent<Image>();
+                if (i2.sprite == i1.sprite || i2.sprite== i3.sprite || i2.sprite == i4.sprite){
+                rep = true;
+                Debug.Log("SOMBRA REPETIDO :" +rep);  
+                }
+            }
+            if(name == "S3"){
+                i3 = GameObject.Find("S3").GetComponent<Image>();
+                if (i3.sprite == i1.sprite || i3.sprite== i2.sprite || i3.sprite == i4.sprite){
+                rep = true;
+                Debug.Log("SOMBRA REPETIDO :" +rep);  
+                }
+            }
+            if(name == "S4"){
+                i4 = GameObject.Find("S4").GetComponent<Image>();
+                if (i4.sprite == i1.sprite || i4.sprite== i2.sprite || i4.sprite == i3.sprite){
+                rep = true;
+                Debug.Log("SOMBRA REPETIDO :" +rep);                
+                }
+            }
+        }
+
         WWW www = new WWW((rutas[index])); 
         yield return www;
-        //img.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0, 0), 1);
-        /*
-        String etiqueta = dir[1];
-        Debug.Log("pedazo de cadena: " + etiqueta);*/
+       
     }
 
     public void Update()
