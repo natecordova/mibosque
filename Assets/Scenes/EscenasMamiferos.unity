@@ -311,7 +311,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 95edc02b05b102d41884ee285678f03b, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -332,6 +332,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sombra: {fileID: 0}
   animal: 
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i4: {fileID: 0}
   img: {fileID: 0}
 --- !u!222 &30840152
 CanvasRenderer:
@@ -593,7 +597,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 95edc02b05b102d41884ee285678f03b, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -614,6 +618,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sombra: {fileID: 0}
   animal: 
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i4: {fileID: 0}
   img: {fileID: 0}
 --- !u!222 &85600448
 CanvasRenderer:
@@ -941,7 +949,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 95edc02b05b102d41884ee285678f03b, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -962,6 +970,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sombra: {fileID: 0}
   animal: 
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i4: {fileID: 0}
   img: {fileID: 0}
 --- !u!222 &137163272
 CanvasRenderer:
@@ -1208,7 +1220,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i4: {fileID: 0}
   charge: {fileID: 938236042}
+  miruta: 
+  rutas:
+  - Sprites/mono_capuchino-color
+  - Sprites/rata_espinosa-color
+  - Sprites/oso_perezoso-color
+  - Sprites/venado_cola_blanca-color
   img: {fileID: 0}
 --- !u!1 &297575939
 GameObject:
@@ -2202,7 +2224,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 95edc02b05b102d41884ee285678f03b, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2223,6 +2245,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sombra: {fileID: 0}
   animal: 
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i4: {fileID: 0}
   img: {fileID: 0}
 --- !u!222 &544289453
 CanvasRenderer:
@@ -2885,7 +2911,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i4: {fileID: 0}
   charge: {fileID: 0}
+  miruta: 
+  rutas:
+  - Sprites/mono_capuchino-color
+  - Sprites/rata_espinosa-color
+  - Sprites/oso_perezoso-color
+  - Sprites/venado_cola_blanca-color
   img: {fileID: 711904607}
 --- !u!1 &732090170
 GameObject:
@@ -4021,7 +4057,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i4: {fileID: 0}
   charge: {fileID: 0}
+  miruta: 
+  rutas:
+  - Sprites/mono_capuchino-color
+  - Sprites/rata_espinosa-color
+  - Sprites/oso_perezoso-color
+  - Sprites/venado_cola_blanca-color
   img: {fileID: 1330896258}
 --- !u!1 &1450717384
 GameObject:
@@ -4985,7 +5031,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  i1: {fileID: 0}
+  i2: {fileID: 0}
+  i3: {fileID: 0}
+  i4: {fileID: 0}
   charge: {fileID: 0}
+  miruta: 
+  rutas:
+  - Sprites/mono_capuchino-color
+  - Sprites/rata_espinosa-color
+  - Sprites/oso_perezoso-color
+  - Sprites/venado_cola_blanca-color
   img: {fileID: 2008922807}
 --- !u!1 &2060720959
 GameObject:

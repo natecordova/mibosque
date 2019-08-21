@@ -19,17 +19,17 @@ public class db : MonoBehaviour
     {
 
 
-        sqlite_conexion();
+        //sqlite_conexion();    //llama al metodo que trae toda la base sqlite_conexion()
 
 
 
     }
 
 
-   
 
 
-     void sqlite_conexion()
+
+    void sqlite_conexion()
     {
         string conn = "URI=file:" + Application.dataPath + "/Plugins/mibosque.db"; //Path to database.
         IDbConnection dbconn;
@@ -47,10 +47,11 @@ public class db : MonoBehaviour
             string nombre = reader.GetString(1);   // (1) es el segundo valor en el array del segundo campo de la base (nombre)
             string tipo = reader.GetString(2);
             string url = reader.GetString(3);
+            string rutaLocal = reader.GetString(4);
 
             //int rand = reader.GetInt32(2);
 
-            Debug.Log("id= " + id + "  nombre =" + nombre + "  tipo =" + tipo + "  url =" + url);
+            Debug.Log("Conexion id= " + id + "  nombre =" + nombre + "  tipo =" + tipo + "  url =" + url + "  rutaLocal= " + rutaLocal);
         }
 
         reader.Close();

@@ -74,6 +74,12 @@ public class CargarAnimales : MonoBehaviour
     }*/
 
     public void Start(){
+
+
+
+        
+
+
         System.Random rand = new System.Random();
         //aleatorias[] = new string[]{};
         int azar = 0;

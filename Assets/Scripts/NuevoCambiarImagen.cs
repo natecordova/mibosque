@@ -16,19 +16,25 @@ public class NuevoCambiarImagen : MonoBehaviour
     //public GameObject comp1,comp2,comp3;
     public string miruta;
 
-    string[] rutas2 = {
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/mono_capuchino-color.png",
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/rata_espinosa-color.png",
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/oso_perezoso-color.png",
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/venado_cola_blanca-color.png"
-    };
+    
 
-    string[] rutas = {
+    
+    public string[] rutas = {
         "Sprites/mono_capuchino-color",
         "Sprites/rata_espinosa-color",
         "Sprites/oso_perezoso-color",
-        "Sprites/venado_cola_blanca-color",
+        "Sprites/venado_cola_blanca-color"
     };
+    
+
+   /*     
+    public string[] rutas = {
+        "",
+        "",
+        "",
+        ""
+    };
+    */
 
 
     // The output of the image
@@ -39,6 +45,11 @@ public class NuevoCambiarImagen : MonoBehaviour
 
     IEnumerator Start()
     {    
+
+
+
+
+
         int index = 0;
         bool rep = true;
         
@@ -84,14 +95,55 @@ public class NuevoCambiarImagen : MonoBehaviour
 
             objdb = new db();
 
-            Debug.Log("CONSULTA" + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
+            //Debug.Log("CONSULTA" + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
 
-            /*monoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
-            rataBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
-            osoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '3'");
-            venadoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");*/
+        
+        for (int i = 0;i < rutas.Length; i++)
+        {
+            string sel = "SELECT * FROM especie WHERE id = '";
+            
 
-        while(rep == true){
+            rutas[i] = objdb.sqlite_consulta(sel + (i+1) + "'");
+            Debug.Log("rutas de base FOR xxx " + rutas[i]);
+            Debug.Log("length "+ rutas.Length);
+        }
+        
+
+        foreach (string i in rutas) {
+           
+            Debug.Log("rutas de base foreach xxx " + i);
+            
+
+        }
+        
+
+       /*     rutas[0] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
+        rutas[1] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
+        rutas[2] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '3'");
+        rutas[3] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");
+        Debug.Log("rutas de base xxx "+rutas[0]);
+        Debug.Log("rutas de base " + rutas[1]);
+        Debug.Log("rutas de base " + rutas[2]);
+        Debug.Log("rutas de base " + rutas[3]);
+        */
+
+        /*    for (int i = 0; i < rutas.Length; i++)
+            {
+
+                rutas[i] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
+
+
+                Debug.Log("Rutas en el arreglo " + rutas[i]);
+                Debug.Log("Rutas de consulta en el 1  " + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
+            }
+            */
+
+        /*monoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
+        rataBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
+        osoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '3'");
+        venadoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");*/
+
+        while (rep == true){
             rep = false;
             System.Random rand = new System.Random();
             index = rand.Next(rutas.Length);
