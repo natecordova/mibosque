@@ -285,6 +285,8 @@ MonoBehaviour:
   MusicClipOso: {fileID: 8300000, guid: 4fa3fbc6757ec104e85064622eca2068, type: 3}
   MusicClipRaton: {fileID: 8300000, guid: a44ca4b75fa38f840b3d2b675ffe7822, type: 3}
   MusicClipVenado: {fileID: 8300000, guid: 6bd0c584b06f255438c0f7b7ac3e4713, type: 3}
+  MusicClipArdilla: {fileID: 8300000, guid: 7a97f197eb2e9c847bab900ae54f5da2, type: 3}
+  MusicClipBambi: {fileID: 8300000, guid: f56bf76aaff441a48ae8a59423329e1e, type: 3}
   MusicClipError: {fileID: 8300000, guid: 1fbd866f38b54d6469db11d8eadb94a8, type: 3}
   MusicSource: {fileID: 106627644}
   anim: {fileID: 0}
@@ -309,7 +311,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 95edc02b05b102d41884ee285678f03b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15499ae181dcd8b40b852c70a6a9efd5, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -571,6 +573,8 @@ MonoBehaviour:
   MusicClipOso: {fileID: 8300000, guid: 4fa3fbc6757ec104e85064622eca2068, type: 3}
   MusicClipRaton: {fileID: 8300000, guid: a44ca4b75fa38f840b3d2b675ffe7822, type: 3}
   MusicClipVenado: {fileID: 8300000, guid: 6bd0c584b06f255438c0f7b7ac3e4713, type: 3}
+  MusicClipArdilla: {fileID: 8300000, guid: 7a97f197eb2e9c847bab900ae54f5da2, type: 3}
+  MusicClipBambi: {fileID: 8300000, guid: f56bf76aaff441a48ae8a59423329e1e, type: 3}
   MusicClipError: {fileID: 8300000, guid: 1fbd866f38b54d6469db11d8eadb94a8, type: 3}
   MusicSource: {fileID: 106627644}
   anim: {fileID: 0}
@@ -595,7 +599,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 95edc02b05b102d41884ee285678f03b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15499ae181dcd8b40b852c70a6a9efd5, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -923,6 +927,8 @@ MonoBehaviour:
   MusicClipOso: {fileID: 8300000, guid: 4fa3fbc6757ec104e85064622eca2068, type: 3}
   MusicClipRaton: {fileID: 8300000, guid: a44ca4b75fa38f840b3d2b675ffe7822, type: 3}
   MusicClipVenado: {fileID: 8300000, guid: 6bd0c584b06f255438c0f7b7ac3e4713, type: 3}
+  MusicClipArdilla: {fileID: 8300000, guid: 7a97f197eb2e9c847bab900ae54f5da2, type: 3}
+  MusicClipBambi: {fileID: 8300000, guid: f56bf76aaff441a48ae8a59423329e1e, type: 3}
   MusicClipError: {fileID: 8300000, guid: 1fbd866f38b54d6469db11d8eadb94a8, type: 3}
   MusicSource: {fileID: 106627644}
   anim: {fileID: 0}
@@ -947,7 +953,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 95edc02b05b102d41884ee285678f03b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15499ae181dcd8b40b852c70a6a9efd5, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1116,9 +1122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 233179720}
   - component: {fileID: 233179724}
+  - component: {fileID: 233179722}
   - component: {fileID: 233179725}
   - component: {fileID: 233179723}
-  - component: {fileID: 233179722}
   - component: {fileID: 233179721}
   m_Layer: 5
   m_Name: A1
@@ -2198,6 +2204,8 @@ MonoBehaviour:
   MusicClipOso: {fileID: 8300000, guid: 4fa3fbc6757ec104e85064622eca2068, type: 3}
   MusicClipRaton: {fileID: 8300000, guid: a44ca4b75fa38f840b3d2b675ffe7822, type: 3}
   MusicClipVenado: {fileID: 8300000, guid: 6bd0c584b06f255438c0f7b7ac3e4713, type: 3}
+  MusicClipArdilla: {fileID: 8300000, guid: 7a97f197eb2e9c847bab900ae54f5da2, type: 3}
+  MusicClipBambi: {fileID: 8300000, guid: f56bf76aaff441a48ae8a59423329e1e, type: 3}
   MusicClipError: {fileID: 8300000, guid: 1fbd866f38b54d6469db11d8eadb94a8, type: 3}
   MusicSource: {fileID: 106627644}
   anim: {fileID: 0}
@@ -2798,7 +2806,6 @@ GameObject:
   - component: {fileID: 711904607}
   - component: {fileID: 711904606}
   - component: {fileID: 711904605}
-  - component: {fileID: 711904609}
   m_Layer: 5
   m_Name: A3
   m_TagString: Untagged
@@ -2886,18 +2893,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711904603}
   m_CullTransparentMesh: 0
---- !u!114 &711904609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711904603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb884f6609c77844af1b7de5f53e4a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &711904610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3944,7 +3939,6 @@ GameObject:
   - component: {fileID: 1330896258}
   - component: {fileID: 1330896257}
   - component: {fileID: 1330896256}
-  - component: {fileID: 1330896260}
   m_Layer: 5
   m_Name: A4
   m_TagString: Untagged
@@ -4032,18 +4026,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330896254}
   m_CullTransparentMesh: 0
---- !u!114 &1330896260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330896254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb884f6609c77844af1b7de5f53e4a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1330896261
 MonoBehaviour:
   m_ObjectHideFlags: 0

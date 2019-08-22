@@ -16,16 +16,19 @@ public class NuevoCambiarImagen : MonoBehaviour
     //public GameObject comp1,comp2,comp3;
     public string miruta;
 
-    
 
+
+
+    public string[] rutas;
     
-    public string[] rutas = {
+    /*
+    = {
         "Sprites/mono_capuchino-color",
         "Sprites/rata_espinosa-color",
         "Sprites/oso_perezoso-color",
         "Sprites/venado_cola_blanca-color"
     };
-    
+    */
 
    /*     
     public string[] rutas = {
@@ -93,19 +96,23 @@ public class NuevoCambiarImagen : MonoBehaviour
             //Cargar las imagenes locales
             //objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
 
-            objdb = new db();
+           objdb = new db();
+        // objdb = anim.AddComponent<db>();
 
-            //Debug.Log("CONSULTA" + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
+        //Debug.Log("CONSULTA" + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
 
         
+        var totalLocal = objdb.sqlite_totalRegistros();
+        rutas =new string[totalLocal];
+
         for (int i = 0;i < rutas.Length; i++)
         {
             string sel = "SELECT * FROM especie WHERE id = '";
+            //string par= objdb.sqlite_consulta(sel + (i + 1) + "'");
             
-
-            rutas[i] = objdb.sqlite_consulta(sel + (i+1) + "'");
+                rutas[i] = objdb.sqlite_consulta(sel + (i+1) + "'");
             Debug.Log("rutas de base FOR xxx " + rutas[i]);
-            Debug.Log("length "+ rutas.Length);
+            //Debug.Log("length "+ rutas.Length);
         }
         
 

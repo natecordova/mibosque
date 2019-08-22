@@ -11,20 +11,19 @@ public class CargarSombra : MonoBehaviour
     private string monoBase, rataBase, osoBase, venadoBase;
     public Image i1,i2,i3,i4;
 
-    string[] rutasX = {
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/mono%20capuchino_1.png",
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/rata%20espinosa_1.png",
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/oso%20perezoso_1.png",
-        "https://raw.githubusercontent.com/natecordova/mibosque/master/Assets/Sprites/venado%20cola%20blanca-01.png"
-    };
 
-    string[] rutas = {
+
+    string[] rutas;
+
+    /*
+        = {
         "Sprites/mono_capuchino-sombra",
         "Sprites/rata_espinosa-sombra",
         "Sprites/oso_perezoso-sombra",
         "Sprites/venado_cola_blanca-sombra",
     };
 
+        */
 
     // The output of the image
     public Image img;
@@ -55,15 +54,40 @@ public class CargarSombra : MonoBehaviour
         //Cargar las imagenes locales
         //objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
 
-        objdb = new db();
+        //objdb = new db();
 
-        Debug.Log("CONSULTA" + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
+        //Debug.Log("CONSULTA" + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
 
         /*monoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
         rataBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
         osoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '3'");
         venadoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");*/
-    while(rep == true){
+
+
+
+           objdb = new db();
+
+        var totalLocal = objdb.sqlite_totalRegistros();
+        rutas = new string[totalLocal];
+
+        for (int i = 0; i < rutas.Length; i++)
+        {
+            string sel = "SELECT * FROM sombra WHERE id = '";
+            //string par= objdb.sqlite_consulta(sel + (i + 1) + "'");
+
+            rutas[i] = objdb.sqlite_consulta(sel + (i + 1) + "'");
+            Debug.Log("cargarSombra rutas " + rutas[i]);
+            //Debug.Log("cargar sombra length " + rutas.Length);
+        }
+
+
+     
+
+
+
+
+
+        while (rep == true){
             rep = false;
 
         System.Random rand = new System.Random();

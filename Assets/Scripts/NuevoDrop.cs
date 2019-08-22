@@ -21,6 +21,9 @@ public class NuevoDrop : MonoBehaviour, IDropHandler {
     public AudioClip MusicClipOso;
     public AudioClip MusicClipRaton;
     public AudioClip MusicClipVenado;
+    public AudioClip MusicClipArdilla;
+    public AudioClip MusicClipBambi;
+
     public AudioClip MusicClipError;
     public AudioSource MusicSource;
     public Image anim;
@@ -127,6 +130,46 @@ public class NuevoDrop : MonoBehaviour, IDropHandler {
                 anim.sprite = Resources.Load<Sprite>("Sprites/venado_cola_blanca-color");
                 objeto1.SetActive(false);
                 MusicSource.clip = MusicClipVenado;
+                MusicSource.Play();
+                encenderEstrellas();
+                //estrella4.SetActive(true);
+                // cont = true;
+                contador++;
+                //contar(contador);
+                //contador = contador + 1;
+                //Debug.Log(eventData.pointerDrag.name + "lo toco" + objeto1.name + "dddd" + contador);
+            }
+
+            if ((eventData.pointerDrag.tag == "ardilla") && (gameObject.tag == "ardilla"))
+            {
+                Debug.Log("COINCIDENCIA");
+                SimpleDrag2.itemBeingDragged.transform.SetParent(transform);
+                Destroy(item);
+                objeto1 = GameObject.Find(eventData.pointerDrag.name);
+                anim = GameObject.Find(gameObject.name).GetComponent<Image>();
+                anim.sprite = Resources.Load<Sprite>("Sprites/ardilla");
+                objeto1.SetActive(false);
+                MusicSource.clip = MusicClipArdilla;
+                MusicSource.Play();
+                encenderEstrellas();
+                //estrella4.SetActive(true);
+                // cont = true;
+                contador++;
+                //contar(contador);
+                //contador = contador + 1;
+                //Debug.Log(eventData.pointerDrag.name + "lo toco" + objeto1.name + "dddd" + contador);
+            }
+
+            if ((eventData.pointerDrag.tag == "bambi") && (gameObject.tag == "bambi"))
+            {
+                Debug.Log("COINCIDENCIA");
+                SimpleDrag2.itemBeingDragged.transform.SetParent(transform);
+                Destroy(item);
+                objeto1 = GameObject.Find(eventData.pointerDrag.name);
+                anim = GameObject.Find(gameObject.name).GetComponent<Image>();
+                anim.sprite = Resources.Load<Sprite>("Sprites/bambi");
+                objeto1.SetActive(false);
+                MusicSource.clip = MusicClipBambi;
                 MusicSource.Play();
                 encenderEstrellas();
                 //estrella4.SetActive(true);
