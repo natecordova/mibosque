@@ -87,7 +87,7 @@ public class NuevoCambiarImagen : MonoBehaviour
                 i4 = GameObject.Find("A4").GetComponent<Image>();
             }
             Debug.Log("Nombre Soy: " + name);
-            Debug.Log("ANIMAL: " + anim.sprite);
+           // Debug.Log("ANIMAL: " + anim.sprite);
             Debug.Log("I1: " + i1.sprite);
             Debug.Log("I2: " + i2.sprite);
             Debug.Log("I3: " + i3.sprite);
@@ -170,7 +170,120 @@ public class NuevoCambiarImagen : MonoBehaviour
                 tag = et[0];
                 Debug.Log("etiqueta asignada 1: " + et[0]);
             }
-            anim.sprite = Resources.Load<Sprite>(ruta); //"Sprites/oso perezoso_1"
+
+
+
+             anim.sprite = Resources.Load<Sprite>(ruta); //carga la imagen
+
+
+            //Second method Cargar Imagenes
+
+            /*
+            WWW www = new WWW(Application.dataPath + "/Resources/" + ruta + ".png");  //cambiar (url) por (rutas[index]) para que sea random 
+
+            yield return www;
+
+            Debug.Log("URL NAME: " + Application.dataPath + "/Resources/" + ruta + ".png");
+
+            anim.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0.5f, 0.5f), 40);
+            */
+            //Fin second method cargar imagenes
+
+
+
+
+
+
+
+            //www.texture.filterMode = FilterMode.Bilinear; //No pixe images
+
+            /*
+            if (www == null)
+            {
+                www = new WWW(Application.dataPath + "/Resources/" + ruta + ".png");
+
+                yield return www;
+
+                //cambiar (url) por (rutas[index]) para que sea random 
+                Debug.Log("www Es null");
+                
+            }
+
+            */
+
+
+
+            /*
+
+            #if UNITY_ANDROID
+            Debug.Log("Unity Android");
+
+            WWW www = new WWW("JAR=file:" + Application.dataPath + "/Resources/" + ruta + ".png");  //cambiar (url) por (rutas[index]) para que sea random 
+
+            yield return www;
+
+            
+#elif UNITY_IOS
+                Debug.Log("Unity iPhone");
+
+             WWW www = new WWW("JAR=file:" + Application.dataPath + "/Resources/" + ruta + ".png");  //cambiar (url) por (rutas[index]) para que sea random 
+
+            yield return www;
+
+#elif UNITY_STANDALONE_WIN
+                Debug.Log("Windows");
+                  www = new WWW(Application.dataPath + "/Resources/" + ruta + ".png");
+            yield return www;
+
+#else
+                Debug.Log("Any other platform");
+                  www = new WWW(Application.dataPath + "/Resources/" + ruta + ".png");
+
+                yield return www;
+#endif
+*/
+
+
+
+
+            //"jar:file://" + Application.dataPath + "!/assets/" + fileName
+
+            //img.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0, 0), 1);
+
+
+            //"jar:file://" + Application.dataPath + "!/assets/" + p
+
+            //anim.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0.5f, 0.5f), 40);
+
+
+
+
+            //anim.sprite = Resources.Load<Sprite>("jar:file://" + Application.dataPath + "!/" +ruta); //"Sprites/oso perezoso_1"
+            //path = "jar:file://" + Application.dataPath + "!/assets/";
+
+            //anim.sprite = Resources.Load(ruta, typeof(Sprite)) as Sprite;  //Version pro cargar
+
+            /*
+
+            var texture = Resources.Load<Texture2D>(ruta);
+            if (texture != null)
+            {
+
+                anim.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+
+                Debug.Log("NOT NULLLLLL");
+
+            }
+            else {
+                anim.sprite = Resources.Load<Sprite>(ruta); //"Sprites/oso perezoso_1"
+                Debug.Log("NULLLLLL");
+
+            }
+            */
+
+
+
+
 
             Debug.Log("ANIMAL DESPUES: " + anim.sprite);
             if(name == "A1"){
@@ -182,7 +295,7 @@ public class NuevoCambiarImagen : MonoBehaviour
             }
             if(name == "A2"){
                 i2 = GameObject.Find("A2").GetComponent<Image>();
-                if (i2.sprite == i1.sprite || i2.sprite== i3.sprite || i2.sprite == i4.sprite){
+                if (i2.sprite == i1.sprite || i2.sprite == i3.sprite || i2.sprite == i4.sprite){
                 rep = true;
                 Debug.Log("ANIMAL REPETIDO :" +rep);  
                 }
@@ -211,10 +324,10 @@ public class NuevoCambiarImagen : MonoBehaviour
         }
 
         WWW www = new WWW((rutas[index]));    
-               
-        yield return www;
+
+
         //img.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0, 0), 1);
-       
+        yield return www;
     }
 
     /*public void Start(){

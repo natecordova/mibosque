@@ -44,9 +44,15 @@ public class NuevoCargarImagen : MonoBehaviour
         
             WWW www = new WWW( sqlite_conexion() );  //cambiar (url) por (rutas[index]) para que sea random 
         yield return www;
-        img.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height),
+
+        /*
+         * img.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height),
             new Vector2(0.5f, 0.5f), 40);
-        
+            */
+
+        img.sprite=  Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0.5f, 0.5f));
+
+
 
         //Debug.Log("Randomly selected author is " + rutas[index]);
 

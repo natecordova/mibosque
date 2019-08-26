@@ -109,8 +109,30 @@ public class CargarSombra : MonoBehaviour
             tag = et[0];
             Debug.Log("etiqueta asignada 1: " + et[0]);
         }
+
+
         sombra.sprite = Resources.Load<Sprite>(ruta);
-        animal = ruta.Replace("sombra","color");
+
+
+            //Second method
+            /*
+            WWW www = new WWW(Application.dataPath + "/Resources/" + ruta + ".png");  //cambiar (url) por (rutas[index]) para que sea random 
+            yield return www;
+
+            Debug.Log("URL NAME: " + Application.dataPath + "/Resources/" + ruta + ".png");
+
+            www.texture.filterMode = FilterMode.Bilinear;
+            sombra.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0.5f, 0.5f), 40);
+            */        
+            // fin second method
+
+
+
+
+
+
+
+            animal = ruta.Replace("sombra","color");
 		Debug.Log("animal : "+ animal);
 
         Debug.Log("SOMBRA DESPUES: " + sombra.sprite);
