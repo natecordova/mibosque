@@ -51,7 +51,7 @@ public class NuevoDrop : MonoBehaviour, IDropHandler {
        
         objeto2 = GameObject.Find("estrella");
         Debug.Log("entre de nuevo");
-        if (!item)
+        /*if (!item)
         {
             if ((eventData.pointerDrag.tag == "oso_perezoso") && (gameObject.tag == "oso_perezoso"))
             {
@@ -188,13 +188,41 @@ public class NuevoDrop : MonoBehaviour, IDropHandler {
             }
 
 
+        }*/
+        if (!item)
+        {
+            if ((eventData.pointerDrag.tag == gameObject.tag))
+            {
+                Debug.Log("COINCIDENCIA entre "+ eventData.pointerDrag.name + " y " + gameObject.name);
+                SimpleDrag2.itemBeingDragged.transform.SetParent(transform);
+                string imag = eventData.pointerDrag.tag;
+                Destroy(item);
+                objeto1 = GameObject.Find(eventData.pointerDrag.name);
+                anim = GameObject.Find(gameObject.name).GetComponent<Image>();
+                anim.sprite = Resources.Load<Sprite>("Sprites/"+imag+"-color");
+                objeto1.SetActive(false);
+                //MusicSource.clip = MusicClipOso;
+                //MusicSource.Play();
+                encenderEstrellas();
+
+                //cont = true;
+                //estrella1.SetActive(true);
+                contador++;
+                //contar(contador);
+                Debug.Log(eventData.pointerDrag.name + "lo toco" + objeto1.name+"dddd" + contador);
+            }else
+            {
+                MusicSource.clip = MusicClipError;
+                MusicSource.Play();
+            }
         }
-        Debug.Log("aqui estoy cntando9999999" + contador);
+
+        /*Debug.Log("aqui estoy cntando9999999" + contador);
         if (contador == 3)
         {
             Debug.Log("siiiiii entroooo");
             //win.SetActive(true);
-        }
+        }*/
 
 
 

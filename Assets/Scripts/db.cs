@@ -51,7 +51,7 @@ public class db : MonoBehaviour
 
             //int rand = reader.GetInt32(2);
 
-            Debug.Log("Conexion id= " + id + "  nombre =" + nombre + "  tipo =" + tipo + "  url =" + url + "  rutaLocal= " + rutaLocal);
+            //Debug.Log("Conexion id= " + id + "  nombre =" + nombre + "  tipo =" + tipo + "  url =" + url + "  rutaLocal= " + rutaLocal);
         }
 
         reader.Close();
@@ -92,7 +92,7 @@ public class db : MonoBehaviour
             string rutaLocal = reader.GetString(4);
 
             consulta = rutaLocal;  //Asigna la ruta guardada en la base a la consulta que se devuelve
-            Debug.Log("La consulta " + consulta);
+            //Debug.Log("La consulta " + consulta);
 
             //ReadSingleRow((IDataRecord)reader);
            
@@ -108,7 +108,7 @@ public class db : MonoBehaviour
 
             //int rand = reader.GetInt32(2);
 
-            Debug.Log("id= " + id + "  nombre= " + nombre + "  tipo= " + tipo + "  url= " + url + "  rutaLocal= " + rutaLocal);
+            //Debug.Log("id= " + id + "  nombre= " + nombre + "  tipo= " + tipo + "  url= " + url + "  rutaLocal= " + rutaLocal);
         }
 
 
@@ -174,7 +174,7 @@ public class db : MonoBehaviour
 
             //ReadSingleRow((IDataRecord)reader);
 
-            Debug.Log("Total de registros" + total);
+            //Debug.Log("Total de registros" + total);
 
             
 

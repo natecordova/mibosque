@@ -8,6 +8,7 @@ public class Inicio : MonoBehaviour {
     // Use this for initialization
   
 	void Start () {
+        Debug.Log("SE EJECUTA ESTE PRIMERO");
         //Estrella.SetActive(false);
         //objeto1 = GameObject.Find("estrella");
         //objeto1.GetComponent<Renderer>().enabled = false;

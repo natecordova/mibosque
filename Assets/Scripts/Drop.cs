@@ -46,7 +46,7 @@ public class Drop : MonoBehaviour, IDropHandler {
        
         objeto2 = GameObject.Find("estrella");
         Debug.Log("entre de nuevo");
-        if (!item)
+        /*if (!item)
         {
             if ((eventData.pointerDrag.name == "Oso") && (gameObject.name == "imgOsoNegro"))
             {
@@ -137,6 +137,29 @@ public class Drop : MonoBehaviour, IDropHandler {
         {
             Debug.Log("siiiiii entroooo");
             //win.SetActive(true);
+        }*/
+         if (!item)
+        {
+            if ((eventData.pointerDrag.name == "Oso") && (gameObject.name == "imgOsoNegro"))
+            {
+                Debug.Log(eventData.pointerDrag.name + " vs " + gameObject.name);
+                SimpleDrag2.itemBeingDragged.transform.SetParent(transform);
+                Destroy(item);
+                objeto1 = GameObject.Find("imgOsoNegro");
+                objeto1.SetActive(false);
+                MusicSource.clip = MusicClipOso;
+                MusicSource.Play();
+                encenderEstrellas();
+                //cont = true;
+                estrella1.SetActive(true);
+                contador++;
+                //contar(contador);
+                Debug.Log(eventData.pointerDrag.name + "lo toco" + objeto1.name+"dddd" + contador);
+            }else
+            {
+                MusicSource.clip = MusicClipError;
+                MusicSource.Play();
+            }
         }
 
 
