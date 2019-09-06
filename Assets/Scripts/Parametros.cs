@@ -20,14 +20,9 @@ public class Parametros : MonoBehaviour
     public GameObject A2;
     public GameObject A3;
     public GameObject A4;
-       
-    //string url = "https://clipground.com/images/monkey-baby-clipart-14.jpg";     
 
-    //IEnumerator Start()
     public void Start()
-    {    
-    	
-    	//ssss = GameObject.Find("SOMBRAS");
+    {        	
     	gameObject.transform.SetAsFirstSibling();
         Debug.Log("EN PARAMETROS");
         int index = 0;
@@ -40,19 +35,12 @@ public class Parametros : MonoBehaviour
 
         for (int i = 0;i < rutas.Length; i++)
         {
-            string sel = "SELECT * FROM especie WHERE id = '";
-            //string par= objdb.sqlite_consulta(sel + (i + 1) + "'");
-            
-            rutas[i] = objdb.sqlite_consulta(sel + (i+1) + "'");
-            //Debug.Log("rutas de base FOR xxx " + rutas[i]);
-            //Debug.Log("length "+ rutas.Length);
+            string sel = "SELECT * FROM especie WHERE id = '";            
+            rutas[i] = objdb.sqlite_consulta(sel + (i+1) + "'");            
         }
         
-
-        foreach (string i in rutas) {
-           
-            Debug.Log("rutas en parámetros " + i);            
-
+        foreach (string i in rutas) {           
+            Debug.Log("rutas en parámetros " + i);
         }
 
         
