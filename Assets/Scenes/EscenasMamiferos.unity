@@ -432,9 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7bb1f2c59510745a1493ab60a854e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 5
   objeto1: {fileID: 0}
-  objeto2: {fileID: 0}
   panel: {fileID: 2060720959}
   estrella1: {fileID: 981179091}
   estrella2: {fileID: 84571445}
@@ -442,13 +440,8 @@ MonoBehaviour:
   estrella4: {fileID: 2095397265}
   contarEncendidos: 0
   inicontador: {fileID: 0}
-  MusicClipMono: {fileID: 8300000, guid: f1ad13892e4a81c47a0c26c5bb610797, type: 3}
-  MusicClipOso: {fileID: 8300000, guid: 4fa3fbc6757ec104e85064622eca2068, type: 3}
-  MusicClipRaton: {fileID: 8300000, guid: a44ca4b75fa38f840b3d2b675ffe7822, type: 3}
-  MusicClipVenado: {fileID: 8300000, guid: 6bd0c584b06f255438c0f7b7ac3e4713, type: 3}
-  MusicClipArdilla: {fileID: 8300000, guid: 7a97f197eb2e9c847bab900ae54f5da2, type: 3}
-  MusicClipBambi: {fileID: 8300000, guid: f56bf76aaff441a48ae8a59423329e1e, type: 3}
   MusicClipError: {fileID: 8300000, guid: 1fbd866f38b54d6469db11d8eadb94a8, type: 3}
+  audio: {fileID: 0}
   MusicSource: {fileID: 106627644}
   anim: {fileID: 0}
   img: {fileID: 0}
@@ -788,9 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7bb1f2c59510745a1493ab60a854e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 5
   objeto1: {fileID: 0}
-  objeto2: {fileID: 0}
   panel: {fileID: 2060720959}
   estrella1: {fileID: 981179091}
   estrella2: {fileID: 84571445}
@@ -798,13 +789,8 @@ MonoBehaviour:
   estrella4: {fileID: 2095397265}
   contarEncendidos: 0
   inicontador: {fileID: 0}
-  MusicClipMono: {fileID: 8300000, guid: f1ad13892e4a81c47a0c26c5bb610797, type: 3}
-  MusicClipOso: {fileID: 8300000, guid: 4fa3fbc6757ec104e85064622eca2068, type: 3}
-  MusicClipRaton: {fileID: 8300000, guid: a44ca4b75fa38f840b3d2b675ffe7822, type: 3}
-  MusicClipVenado: {fileID: 8300000, guid: 6bd0c584b06f255438c0f7b7ac3e4713, type: 3}
-  MusicClipArdilla: {fileID: 8300000, guid: 7a97f197eb2e9c847bab900ae54f5da2, type: 3}
-  MusicClipBambi: {fileID: 8300000, guid: f56bf76aaff441a48ae8a59423329e1e, type: 3}
   MusicClipError: {fileID: 8300000, guid: 1fbd866f38b54d6469db11d8eadb94a8, type: 3}
+  audio: {fileID: 0}
   MusicSource: {fileID: 106627644}
   anim: {fileID: 0}
   img: {fileID: 0}
@@ -917,9 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7bb1f2c59510745a1493ab60a854e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 5
   objeto1: {fileID: 0}
-  objeto2: {fileID: 0}
   panel: {fileID: 2060720959}
   estrella1: {fileID: 981179091}
   estrella2: {fileID: 84571445}
@@ -927,13 +911,8 @@ MonoBehaviour:
   estrella4: {fileID: 2095397265}
   contarEncendidos: 0
   inicontador: {fileID: 0}
-  MusicClipMono: {fileID: 8300000, guid: f1ad13892e4a81c47a0c26c5bb610797, type: 3}
-  MusicClipOso: {fileID: 8300000, guid: 4fa3fbc6757ec104e85064622eca2068, type: 3}
-  MusicClipRaton: {fileID: 8300000, guid: a44ca4b75fa38f840b3d2b675ffe7822, type: 3}
-  MusicClipVenado: {fileID: 8300000, guid: 6bd0c584b06f255438c0f7b7ac3e4713, type: 3}
-  MusicClipArdilla: {fileID: 8300000, guid: 7a97f197eb2e9c847bab900ae54f5da2, type: 3}
-  MusicClipBambi: {fileID: 8300000, guid: f56bf76aaff441a48ae8a59423329e1e, type: 3}
   MusicClipError: {fileID: 8300000, guid: 1fbd866f38b54d6469db11d8eadb94a8, type: 3}
+  audio: {fileID: 0}
   MusicSource: {fileID: 106627644}
   anim: {fileID: 0}
   img: {fileID: 0}
@@ -1005,7 +984,6 @@ GameObject:
   m_Component:
   - component: {fileID: 213074682}
   - component: {fileID: 213074685}
-  - component: {fileID: 213074686}
   - component: {fileID: 213074684}
   - component: {fileID: 213074683}
   m_Layer: 5
@@ -1098,26 +1076,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &213074686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213074681}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bef43d9fd9f371428987c1c297fa5b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  aleatorias:
-  - 
-  - 
-  - 
-  - 
-  animales: []
-  img: {fileID: 0}
 --- !u!1 &233179719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1195,7 @@ MonoBehaviour:
   i3: {fileID: 0}
   i4: {fileID: 0}
   param: {fileID: 0}
-  charge: {fileID: 938236042}
+  charge: {fileID: 0}
   miruta: 
   rutas:
   - Sprites/mono_capuchino-color
@@ -2265,9 +2223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7bb1f2c59510745a1493ab60a854e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 5
   objeto1: {fileID: 0}
-  objeto2: {fileID: 0}
   panel: {fileID: 2060720959}
   estrella1: {fileID: 981179091}
   estrella2: {fileID: 84571445}
@@ -2275,13 +2231,8 @@ MonoBehaviour:
   estrella4: {fileID: 2095397265}
   contarEncendidos: 0
   inicontador: {fileID: 0}
-  MusicClipMono: {fileID: 8300000, guid: f1ad13892e4a81c47a0c26c5bb610797, type: 3}
-  MusicClipOso: {fileID: 8300000, guid: 4fa3fbc6757ec104e85064622eca2068, type: 3}
-  MusicClipRaton: {fileID: 8300000, guid: a44ca4b75fa38f840b3d2b675ffe7822, type: 3}
-  MusicClipVenado: {fileID: 8300000, guid: 6bd0c584b06f255438c0f7b7ac3e4713, type: 3}
-  MusicClipArdilla: {fileID: 8300000, guid: 7a97f197eb2e9c847bab900ae54f5da2, type: 3}
-  MusicClipBambi: {fileID: 8300000, guid: f56bf76aaff441a48ae8a59423329e1e, type: 3}
   MusicClipError: {fileID: 8300000, guid: 1fbd866f38b54d6469db11d8eadb94a8, type: 3}
+  audio: {fileID: 0}
   MusicSource: {fileID: 106627644}
   anim: {fileID: 0}
   img: {fileID: 0}
@@ -3339,7 +3290,6 @@ GameObject:
   - component: {fileID: 938236039}
   - component: {fileID: 938236041}
   - component: {fileID: 938236040}
-  - component: {fileID: 938236042}
   m_Layer: 5
   m_Name: ANIMALES
   m_TagString: Untagged
@@ -3407,26 +3357,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938236038}
   m_CullTransparentMesh: 0
---- !u!114 &938236042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938236038}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bef43d9fd9f371428987c1c297fa5b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  aleatorias:
-  - 
-  - 
-  - 
-  - 
-  animales: []
-  img: {fileID: 0}
 --- !u!1 &981179091
 GameObject:
   m_ObjectHideFlags: 0

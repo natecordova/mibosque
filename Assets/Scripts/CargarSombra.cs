@@ -14,23 +14,20 @@ public class CargarSombra : MonoBehaviour
     public GameObject param;
     private Parametros prm;
 
-    string[] rutas;
-    public string[] sombras;
 
-    /*
-        = {
+     string[] sombras = {
         "Sprites/mono_capuchino-sombra",
         "Sprites/rata_espinosa-sombra",
         "Sprites/oso_perezoso-sombra",
-        "Sprites/venado_cola_blanca-sombra",
+        "Sprites/venado_cola_blanca-sombra"
     };
 
-        */
+        
 
     // The output of the image
     public Image img;
 
-    IEnumerator Start()
+    public void Start()
     {
         int index = 0;
         bool rep = true;
@@ -58,38 +55,14 @@ public class CargarSombra : MonoBehaviour
         if (name == "S4"){
             sombra = GameObject.Find("S4").GetComponent<Image>();
         }
-       // Debug.Log("Nombre Soy: " + name);
+      
 
-        //Cargar las imagenes locales
-        //objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
-
-        //objdb = new db();
-
-        //Debug.Log("CONSULTA" + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
-
-        /*monoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
-        rataBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
-        osoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '3'");
-        venadoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");*/
 
 
 
            objdb = new db();
 
-        var totalLocal = objdb.sqlite_totalRegistros();
-        rutas = new string[totalLocal];
-
-        for (int i = 0; i < rutas.Length; i++)
-        {
-            string sel = "SELECT * FROM sombra WHERE id = '";
-            //string par= objdb.sqlite_consulta(sel + (i + 1) + "'");
-
-            rutas[i] = objdb.sqlite_consulta(sel + (i + 1) + "'");
-            //Debug.Log("cargarSombra rutas " + rutas[i]);
-            //Debug.Log("cargar sombra length " + rutas.Length);
-        }
-
-
+        
      
 
 
@@ -153,8 +126,7 @@ public class CargarSombra : MonoBehaviour
             }
         }
 
-        WWW www = new WWW((rutas[index])); 
-        yield return www;
+    
        
     }
 

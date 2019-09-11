@@ -19,22 +19,15 @@ public class NuevoCambiarImagen : MonoBehaviour
     public string miruta;
 
 
-
-
-    public string[] rutas;
     
-    /*
-    = {
+      
+     string[] animales = {
         "Sprites/mono_capuchino-color",
         "Sprites/rata_espinosa-color",
         "Sprites/oso_perezoso-color",
         "Sprites/venado_cola_blanca-color"
     };
-    */
 
-      
-    public string[] animales;
-    
 
 
     // The output of the image
@@ -43,7 +36,7 @@ public class NuevoCambiarImagen : MonoBehaviour
     // The source image
     string url = "https://clipground.com/images/monkey-baby-clipart-14.jpg";     
 
-    IEnumerator Start()
+    public void Start()
     {    
         Debug.Log("DENTRO DE "+name);
         param = GameObject.Find("Parametros");
@@ -74,69 +67,15 @@ public class NuevoCambiarImagen : MonoBehaviour
             if (name == "A4"){
                 anim = GameObject.Find("A4").GetComponent<Image>();
             }
-           /* Debug.Log("Nombre Soy: " + name);
-            Debug.Log("ANIMAL: " + anim.sprite);
-            Debug.Log("I1: " + i1.sprite);
-            Debug.Log("I2: " + i2.sprite);
-            Debug.Log("I3: " + i3.sprite);
-            Debug.Log("I4: " + i4.sprite);*/
-
-            //Cargar las imagenes locales
-            //objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
+           
 
            objdb = new db();
         // objdb = anim.AddComponent<db>();
 
-        //Debug.Log("CONSULTA" + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
-
-        
-        var totalLocal = objdb.sqlite_totalRegistros();
-        rutas =new string[totalLocal];
-
-        for (int i = 0;i < rutas.Length; i++)
-        {
-            string sel = "SELECT * FROM especie WHERE id = '";
-            //string par= objdb.sqlite_consulta(sel + (i + 1) + "'");
-            
-            rutas[i] = objdb.sqlite_consulta(sel + (i+1) + "'");
-            //Debug.Log("rutas de base FOR xxx " + rutas[i]);
-            //Debug.Log("length "+ rutas.Length);
-        }
-        
-
-        foreach (string i in rutas) {
-           
-            //Debug.Log("rutas de base foreach xxx " + i);
-            
-
-        }
-        
-
-       /*     rutas[0] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
-        rutas[1] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
-        rutas[2] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '3'");
-        rutas[3] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");
-        Debug.Log("rutas de base xxx "+rutas[0]);
-        Debug.Log("rutas de base " + rutas[1]);
-        Debug.Log("rutas de base " + rutas[2]);
-        Debug.Log("rutas de base " + rutas[3]);
-        */
-
-        /*    for (int i = 0; i < rutas.Length; i++)
-            {
-
-                rutas[i] = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
+      
 
 
-                Debug.Log("Rutas en el arreglo " + rutas[i]);
-                Debug.Log("Rutas de consulta en el 1  " + objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'"));
-            }
-            */
-
-        /*monoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '1'");
-        rataBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '2'");
-        osoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '3'");
-        venadoBase = objdb.sqlite_consulta("SELECT * FROM especie WHERE id = '4'");*/
+       
 
         while (rep == true){
             rep = false;
@@ -198,26 +137,15 @@ public class NuevoCambiarImagen : MonoBehaviour
         
         }
 
-        WWW www = new WWW((rutas[index]));    
-               
-        yield return www;
-        //img.sprite = Sprite.Create(www.texture, new Rect(0, 0, www.texture.width, www.texture.height), new Vector2(0, 0), 1);
-       
+     
     }
 
-    /*public void Start(){
-        GameObject.tag = ("elemento_1");
-    }*/
+  
 
     public void Update()
     {
 
-        
-        // anim1.sprite = Resources.Load<Sprite>("Sprites/mono capuchinoNegro");  //Cargar en ejecucion el animal
 
-        //Método con www cargar imagenes
-        //WWW anim1_tex = new WWW("Sprites/mono capuchinoNegro");
-        //anim1.sprite = Sprite.Create(anim1_tex.texture, new Rect(0, 0, anim1.sprite.rect.width,anim1.sprite.rect.height), new Vector2(0, 0), 1); 
     }
 
 

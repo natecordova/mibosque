@@ -26,12 +26,13 @@ public class db : MonoBehaviour
     }
 
 
-
+    
 
 
     void sqlite_conexion()
     {
         string conn = "URI=file:" + Application.dataPath + "/Plugins/mibosque.db"; //Path to database.
+        
         IDbConnection dbconn;
         dbconn = (IDbConnection)new SqliteConnection(conn);
         dbconn.Open(); //Open connection to the database.
@@ -169,24 +170,7 @@ public class db : MonoBehaviour
             string url = reader.GetString(3);
             string rutaLocal = reader.GetString(4);
 
-            //consulta = rutaLocal;  //Asigna la ruta guardada en la base a la consulta que se devuelve
-            //Debug.Log("La consulta " + consulta);
-
-            //ReadSingleRow((IDataRecord)reader);
-
-            //Debug.Log("Total de registros" + total);
-
-            
-
-
-            /* Debug.Log("El total de la clase " + dt.Rows.Count);
-
-             Debug.Log("El total de la clase " + totalRegistros);
-            */
-
-            //int rand = reader.GetInt32(2);
-
-           // Debug.Log("id= " + id + "  nombre= " + nombre + "  tipo= " + tipo + "  url= " + url + "  rutaLocal= " + rutaLocal);
+           
         }
 
 
@@ -220,101 +204,7 @@ public class db : MonoBehaviour
 
 
 
-    /*
-
-    public void sqlite_totalRegistros()
-    {
-        string conn = "URI=file:" + Application.dataPath + "/Plugins/mibosque.db"; //Path to database.
-        IDbConnection dbconn;
-        dbconn = (IDbConnection)new SqliteConnection(conn);
-        dbconn.Open(); //Open connection to the database.
-
-        IDbCommand dbcmd = dbconn.CreateCommand(); //Variable que almacena la consulta a la base
-        string sqlQuery = consulta;
-        dbcmd.CommandText = sqlQuery;
-        IDataReader reader = dbcmd.ExecuteReader();
-
-
-        IDbCommand dbcmd2 = dbconn.CreateCommand(); //Variable que almacena la consulta a la base
-        string sqlQuery2 = "SELECT COUNT(*) FROM especie";
-        dbcmd2.CommandText = sqlQuery2;
-        IDataReader reader2 = dbcmd2.ExecuteReader();
-
-
-
-
-        while (reader.Read())
-        {
-            int id = reader.GetInt32(0);   // (0) es el primer valor en el array del primer campo de la base (id)
-            string nombre = reader.GetString(1);   // (1) es el segundo valor en el array del segundo campo de la base (nombre)
-            string tipo = reader.GetString(2);
-            string url = reader.GetString(3);
-            string rutaLocal = reader.GetString(4);
-
-            consulta = rutaLocal;  //Asigna la ruta guardada en la base a la consulta que se devuelve
-            Debug.Log("La consulta " + consulta);
-
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            this.totalRegistros = dt.Rows.Count;
-
-            //int rand = reader.GetInt32(2);
-
-            Debug.Log("id= " + id + "  nombre= " + nombre + "  tipo= " + tipo + "  url= " + url + "  rutaLocal= " + rutaLocal);
-        }
-
-        while (reader2.Read())
-        {
-            int id = reader.GetInt32(0);   // (0) es el primer valor en el array del primer campo de la base (id)
-            string nombre = reader.GetString(1);   // (1) es el segundo valor en el array del segundo campo de la base (nombre)
-            string tipo = reader.GetString(2);
-            string url = reader.GetString(3);
-            string rutaLocal = reader.GetString(4);
-
-            this.totalRegistros = id;  //Asigna la ruta guardada en la base a la consulta que se devuelve
-            Debug.Log("El total de la clase " + this.totalRegistros);
-            Debug.Log("El id que es el total " + id);
-
-
-
-
-            Debug.Log("Segundo reader id= " + id + "  nombre= " + nombre + "  tipo= " + tipo + "  url= " + url + "  rutaLocal= " + rutaLocal);
-        }
-
-
-
-
-
-        reader.Close();
-        reader = null;
-
-        dbcmd.Dispose();
-        dbcmd = null;
-
-        dbconn.Close();
-        dbconn = null;
-
-
-
-
-        reader2.Close();
-        reader2 = null;
-
-        dbcmd2.Dispose();
-        dbcmd2 = null;
-
-        dbconn.Close();
-        dbconn = null;
-
-
-
-
-
-        return consulta;
-    }
-
-    */
-
+  
 
 
 

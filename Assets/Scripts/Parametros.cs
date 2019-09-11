@@ -7,11 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class Parametros : MonoBehaviour
 {
-    private db objdb;    
-    
-    public string[] rutas;
-    public string[] anim_gen = {"","","",""};
-    public string[] sombras = {"","","",""};
+    private db objdb;
+
+    string[] rutas = {
+        "Sprites/mono_capuchino-color",
+        "Sprites/rata_espinosa-color",
+        "Sprites/oso_perezoso-color",
+        "Sprites/venado_cola_blanca-color",
+        "Sprites/bambi-color",
+         "Sprites/ardilla-color"
+
+    };
+
+
+     string[] anim_gen = {"","","",""};
+    string[] sombras = {"","","",""};
     public GameObject S1;
     public GameObject S2;
     public GameObject S3;
@@ -27,23 +37,12 @@ public class Parametros : MonoBehaviour
         Debug.Log("EN PARAMETROS");
         int index = 0;
         bool rep = true;
-        
+       
+    
         objdb = new db();
         
-        var totalLocal = objdb.sqlite_totalRegistros();
-        rutas =new string[totalLocal];
+      
 
-        for (int i = 0;i < rutas.Length; i++)
-        {
-            string sel = "SELECT * FROM especie WHERE id = '";            
-            rutas[i] = objdb.sqlite_consulta(sel + (i+1) + "'");            
-        }
-        
-        foreach (string i in rutas) {           
-            Debug.Log("rutas en parámetros " + i);
-        }
-
-        
         for (int i = 0;i < anim_gen.Length; i++)
         {
         	rep = true;
@@ -51,8 +50,9 @@ public class Parametros : MonoBehaviour
 	            rep = false;
 	            System.Random rand = new System.Random();
 	            index = rand.Next(rutas.Length);
-	            anim_gen[i] = rutas[index];
-	            //Debug.Log("ALEAT: "+index+ "DE " + anim_gen.Length);
+                Debug.Log("ALEAT: " + index + "DE " + anim_gen.Length);
+                anim_gen[i] = rutas[index];
+	            
 	            if(i == 0){
 	                
 	                if (anim_gen[0] == anim_gen[1] || anim_gen[0] == anim_gen[2] || anim_gen[0] == anim_gen[3]){
